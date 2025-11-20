@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+:root {
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+
+  --inter-font: "Inter", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--grey-900);
+  font-family: var(--inter-font);
+  color: var(--white);
+  font-weight: 400;
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+article {
+  background-color: var(--grey-800);
+  width: 87%;
+  padding: 1.5rem;
+  border-radius: 14px;
+}
+
+img {
+  border-radius: 50%;
+  width: 35%;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.location {
+  color: var(--green);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.occupation {
+  font-size: 0.875rem;
+  margin-bottom: 1.25rem;
+}
+
+.platforms {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.platforms a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 700;
+  padding: 0.875rem;
+  font-size: 0.875rem;
+  background-color: var(--grey-700);
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+.platforms a:hover,
+.platforms a:active {
+  color: var(--grey-900);
+  background-color: var(--green);
+}
+
+@media screen and (min-width: 450px) {
+  article {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 550px) {
+  article {
+    width: clamp(260px, 80%, 390px);
+  }
+}
